@@ -84,8 +84,8 @@ public abstract class MazeSolverTest {
   public void findsPathAfterBackingOutOfDeadEnd() {
     char[][] maze = {
       {'S', '.', '.', '.'},
-      {'.', '#', '#', '.'},
-      {'#', '#', '#', 'E'},
+      {'.', '#', '#', '#'},
+      {'.', '.', '.', 'E'},
     };
     assertTrue(hasPath(maze));
   }

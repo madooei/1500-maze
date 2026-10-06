@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * The scenarios for the maze searches. A concrete subclass supplies hasPath()
- * to pick the search under test. The mazes are the ones the chapter draws.
+ * to pick the search under test.
  */
 public abstract class MazeSolverTest {
 

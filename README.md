@@ -1,6 +1,6 @@
 # Maze Solving
 
-One `MazeSolver` that decides whether a rectangular maze has a path from the top-left cell to the bottom-right cell, three ways: recursive backtracking, an explicit stack, and a queue. A JUnit suite runs all three against the chapter's traced mazes and edge cases.
+One `MazeSolver` that decides whether a rectangular maze has a path from the top-left cell to the bottom-right cell, three ways: recursive backtracking, an explicit stack, and a queue. A JUnit suite runs all three against the edge cases from the problem statement and a set of small mazes, most of them drawn in the chapter.
 
 ## Prerequisites
 

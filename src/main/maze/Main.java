@@ -24,8 +24,8 @@ public final class Main {
 
     // The three searches explore the maze in different orders, but they agree
     // on whether the exit is reachable.
-    System.out.println("Recursive search reaches the exit: " + MazeSolver.hasPath(maze));
-    System.out.println("Stack search reaches the exit: " + MazeSolver.hasPathWithStack(maze));
-    System.out.println("Queue search reaches the exit: " + MazeSolver.hasPathWithQueue(maze));
+    System.out.println("Recursive search reaches the exit: " + MazeSolverRecursive.hasPath(maze));
+    System.out.println("Stack search reaches the exit: " + MazeSolverStack.hasPath(maze));
+    System.out.println("Queue search reaches the exit: " + MazeSolverQueue.hasPath(maze));
   }
 }

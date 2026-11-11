@@ -5,6 +5,6 @@ public class MazeSolverRecursiveTest extends MazeSolverTest {
 
   @Override
   protected boolean hasPath(char[][] maze) {
-    return MazeSolver.hasPath(maze);
+    return MazeSolverRecursive.hasPath(maze);
   }
 }

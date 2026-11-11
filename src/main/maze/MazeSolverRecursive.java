@@ -1,26 +1,10 @@
 package maze;
 
-import stack.Stack;
-import stack.ArrayStack;
-import queue.Queue;
-import queue.LinkedQueue;
+/** The maze path problem, solved with recursive backtracking. */
+public final class MazeSolverRecursive {
 
-/** The maze path problem, solved with recursion, an explicit stack, and a queue. */
-public final class MazeSolver {
-
-  private MazeSolver() {
+  private MazeSolverRecursive() {
     // This class should not be instantiated!
-  }
-
-  /** A cell in the maze: a row and a column. */
-  private static class Position {
-    int row;
-    int col;
-
-    Position(int row, int col) {
-      this.row = row;
-      this.col = col;
-    }
   }
 
   // Can we enter cell (row, col)? It must be inside the maze and not a wall.
@@ -49,22 +33,6 @@ public final class MazeSolver {
   // searches from as visited.
   private static boolean search(
       char[][] maze, boolean[][] visited, int row, int col) {
-    // TODO: Implement me
-    throw new UnsupportedOperationException("TODO: Implement me");
-  }
-
-  // The explicit-stack version. Returns true if there is a path from the
-  // top-left cell to the bottom-right cell. Assumes maze is not null,
-  // rectangular, and has at least one cell.
-  public static boolean hasPathWithStack(char[][] maze) {
-    // TODO: Implement me
-    throw new UnsupportedOperationException("TODO: Implement me");
-  }
-
-  // The queue version. Returns true if there is a path from the top-left cell
-  // to the bottom-right cell. Assumes maze is not null, rectangular, and has
-  // at least one cell.
-  public static boolean hasPathWithQueue(char[][] maze) {
     // TODO: Implement me
     throw new UnsupportedOperationException("TODO: Implement me");
   }

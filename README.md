@@ -1,6 +1,6 @@
 # Maze Solving
 
-One `MazeSolver` that decides whether a rectangular maze has a path from the top-left cell to the bottom-right cell, three ways: recursive backtracking, an explicit stack, and a queue. A JUnit suite runs all three against the edge cases from the problem statement and a set of small mazes, most of them drawn in the chapter.
+Three solutions to the maze path problem: decide whether a rectangular maze has a path from the top-left cell to the bottom-right cell. `MazeSolverRecursive` uses recursive backtracking, `MazeSolverStack` uses an explicit stack, and `MazeSolverQueue` uses a queue. A JUnit suite runs all three against the edge cases from the problem statement and a set of small mazes, most of them drawn in the chapter.
 
 ## Prerequisites
 
@@ -18,7 +18,9 @@ code/
   src/
     main/
       maze/
-        MazeSolver.java                 # the three searches (recursion, stack, queue)
+        MazeSolverRecursive.java        # hasPath with recursive backtracking
+        MazeSolverStack.java            # hasPath with an explicit stack
+        MazeSolverQueue.java            # hasPath with a queue
         Main.java                       # demo entry point
       stack/
         Stack.java                      # the Stack ADT contract (copied from the Stack chapter)
@@ -29,9 +31,9 @@ code/
     test/
       maze/
         MazeSolverTest.java             # abstract: the maze scenarios
-        MazeSolverRecursiveTest.java    # runs them against hasPath
-        MazeSolverStackTest.java        # runs them against hasPathWithStack
-        MazeSolverQueueTest.java        # runs them against hasPathWithQueue
+        MazeSolverRecursiveTest.java    # runs them against MazeSolverRecursive
+        MazeSolverStackTest.java        # runs them against MazeSolverStack
+        MazeSolverQueueTest.java        # runs them against MazeSolverQueue
   scripts/
     run.sh                              # compile and run the maze demo (maze.Main)
     test.sh                             # compile and run every JUnit test
@@ -45,7 +47,7 @@ code/
 
 ## What's here
 
-- `maze.MazeSolver` — `hasPath` (recursive backtracking), `hasPathWithStack` (an explicit stack), and `hasPathWithQueue` (a queue). A maze is a plain `char[][]`. A `'#'` is a wall; any other character is open. Coordinates are `(row, col)`, zero-indexed from the top-left.
+- `maze.MazeSolverRecursive`, `maze.MazeSolverStack`, and `maze.MazeSolverQueue` — one class per search, each with the same method, `hasPath`. The first uses recursive backtracking, the second an explicit stack, and the third a queue. A maze is a plain `char[][]`. A `'#'` is a wall; any other character is open. Coordinates are `(row, col)`, zero-indexed from the top-left.
 - `maze.Main` — a runnable demo on the chapter's 4x4 dead-end maze.
 - `maze.MazeSolverTest` — the abstract scenario suite. It has one subclass per search, so you can test one search alone.
 - `stack.Stack<T>`, `stack.ArrayStack<T>`, `queue.Queue<T>`, and `queue.LinkedQueue<T>` — unchanged copies from the Stack and Queue chapters. The searches use them, so they are included here to keep this code self-contained.

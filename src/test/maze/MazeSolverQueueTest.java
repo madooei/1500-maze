@@ -5,6 +5,6 @@ public class MazeSolverQueueTest extends MazeSolverTest {
 
   @Override
   protected boolean hasPath(char[][] maze) {
-    return MazeSolver.hasPathWithQueue(maze);
+    return MazeSolverQueue.hasPath(maze);
   }
 }

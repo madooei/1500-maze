@@ -48,7 +48,7 @@ code/
 - `scripts/test.sh maze.MazeSolverStackTest` — compiles everything and runs only that test class. Use this while you are working on one search and the others are still empty.
 - `scripts/run.sh demo.MazeSolverStackDemo` — compiles everything and runs that one demo. Every class you implement has its own demo, `<Class>Demo`.
 
-## What's here
+## Contents
 
 - `maze.MazeSolverRecursive`, `maze.MazeSolverStack`, and `maze.MazeSolverQueue` — one class per search, each with the same method, `hasPath`. The first uses recursive backtracking, the second an explicit stack, and the third a queue. A maze is a plain `char[][]`. A `'#'` is a wall; any other character is open. Coordinates are `(row, col)`, zero-indexed from the top-left.
 - `maze.MazeSolverTest` — the abstract scenario suite. It has one subclass per search, so you can test one search alone.
